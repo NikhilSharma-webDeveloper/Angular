@@ -1,0 +1,6 @@
+<div [class.selected]="selected" (click)="onSelectUser()">
+  <section class="user-data">
+    <img [src]="userImage" />
+    <h2>{{ user?.name }}</h2>
+  </section>
+</div>

@@ -1,1 +1,28 @@
-<div></div>
+<main>
+  @if(newTaskAdder){
+  <app-add-new-task
+    (closeNewTaskAdder)="onNewTaskAdder()"
+    (newTaskSubmitted)="addNewTask($event)"
+  ></app-add-new-task>
+  }
+
+  <div id="user-panel">
+    @for (user of userData; track user.id) {
+    <app-user
+      [user]="user"
+      [selected]="user.id === userSelected ? true : false"
+      (selectUser)="onSelectUser($event)"
+    ></app-user
+    >}
+  </div>
+
+  <div id="task-panel">
+    <app-tasks
+      (taskCompleted)="handleCompletedTask($event)"
+      [tasks]="taskData"
+      (onNewTaskAdderButton)="onNewTaskAdder()"
+      [userId]="userSelected"
+      [userName]="userName"
+    ></app-tasks>
+  </div>
+</main>

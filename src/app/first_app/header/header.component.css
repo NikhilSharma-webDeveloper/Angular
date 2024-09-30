@@ -1,4 +1,5 @@
 #header_area_app {
+  height: 10vh;
   padding: 1rem 0rem;
   width: 100%;
   display: flex;
@@ -7,8 +8,9 @@
   align-items: center;
 }
 #header_area_app img {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
+  margin-right: 2rem;
 }
 
 #header_area_app h1 {

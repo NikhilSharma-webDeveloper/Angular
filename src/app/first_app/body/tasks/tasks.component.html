@@ -1,0 +1,24 @@
+<div class="user-tasks">
+  @if (userName) {
+  <section>
+    <header>
+      <h1>{{ userName }}'s Tasks</h1>
+      <button (click)="onNewTaskAdderForm()">Add Task</button>
+    </header>
+    @if (userTasks.length==0){
+    <main>
+      <h2>No Task Till Now</h2>
+    </main>
+    }@else{
+    <main>
+      @for(task of userTasks; track task.id){
+      <app-task [task]="task" (taskCompleted)="handleCompletedTask($event)" />
+      }
+    </main>
+    }
+  </section>
+
+  }@else {
+  <h1>Select user to view tasks</h1>
+  }
+</div>

@@ -1,0 +1,49 @@
+main {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-height: calc(100vh - 15vh);
+  #user-panel {
+    width: 30%;
+    max-height: calc(100vh - 15vh); /* Define a max-height */
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Ensure vertical scrolling is enabled */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  #task-panel {
+    width: 70%;
+    max-height: calc(100vh - 15vh); /* Define a max-height */
+    overflow-y: auto; /* Ensure vertical scrolling is enabled */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+}
+
+/* Show the scrollbar on hover */
+#user-panel:hover #scrollable-content {
+  overflow-y: auto; /* Enable scrolling on hover */
+}
+
+/* Hide scrollbar by default */
+#scrollable-content::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+/* Style the scrollbar track */
+#scrollable-content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color of the scrollbar track */
+  border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Style the scrollbar thumb */
+#scrollable-content::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Style the scrollbar thumb on hover */
+#scrollable-content::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Darker color on hover */
+}

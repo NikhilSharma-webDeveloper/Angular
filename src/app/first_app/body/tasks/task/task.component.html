@@ -1,0 +1,8 @@
+<section class="task">
+  <h2>{{ task.title }}</h2>
+  <time>{{ task.dueDate | date }}</time>
+  <p>{{ task.summary }}</p>
+  <section>
+    <button (click)="completeTask()">Complete</button>
+  </section>
+</section>

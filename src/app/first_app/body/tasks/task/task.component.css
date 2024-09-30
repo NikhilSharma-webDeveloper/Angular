@@ -1,0 +1,41 @@
+.task {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1rem 0rem;
+  background-color: lightblue;
+  padding: 1rem 1rem;
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+  }
+  time {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+  }
+  section {
+    width: 100%;
+    button {
+      float: right;
+      border-radius: 0.8rem;
+      border: 0px;
+      background-color: whitesmoke;
+      font-size: 1.5rem;
+      font-weight: 800;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      transition: transform 0.4s ease-in;
+      margin-right: 1rem;
+    }
+    button:hover {
+      transform: scale(1.1);
+    }
+  }
+}
