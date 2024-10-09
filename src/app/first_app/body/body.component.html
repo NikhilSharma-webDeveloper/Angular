@@ -2,7 +2,7 @@
   @if(newTaskAdder){
   <app-add-new-task
     (closeNewTaskAdder)="onNewTaskAdder()"
-    (newTaskSubmitted)="addNewTask($event)"
+    [userId]="userSelected"
   ></app-add-new-task>
   }
 
@@ -18,8 +18,6 @@
 
   <div id="task-panel">
     <app-tasks
-      (taskCompleted)="handleCompletedTask($event)"
-      [tasks]="taskData"
       (onNewTaskAdderButton)="onNewTaskAdder()"
       [userId]="userSelected"
       [userName]="userName"

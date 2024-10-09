@@ -1,0 +1,14 @@
+<div>
+  <div id="body">
+    <section>
+      <h1>All Angular Projects</h1>
+    </section>
+    <section id="projects">
+      @for (project of projects; track project.id) {
+      <a routerLink="{{ project.link }}">
+        <img [src]="project.img" [alt]="project.title" />
+        <h1>{{ project.title }}</h1> </a
+      >}
+    </section>
+  </div>
+</div>

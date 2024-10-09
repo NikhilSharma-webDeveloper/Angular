@@ -1,0 +1,16 @@
+#header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0rem;
+  img {
+    width: 125px;
+    height: 125px;
+  }
+  h1 {
+    margin: 1rem;
+    color: white;
+    font-size: 3rem;
+  }
+}

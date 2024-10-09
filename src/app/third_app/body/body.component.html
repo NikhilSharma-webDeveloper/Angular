@@ -1,0 +1,24 @@
+<main>
+  <div id="dashboard">
+    <div class="dashboard-item">
+      <app-body-wrapper image="status.png" title="A signal symbol">
+        <app-server-status
+          [currentStatus]="currentStatus()"
+        ></app-server-status>
+      </app-body-wrapper>
+    </div>
+
+    <div class="dashboard-item">
+      <app-body-wrapper image="globe.png" title="Traffic"> </app-body-wrapper>
+      <app-server-traffic
+        [dummyTrafficData]="dummyTrafficData()"
+      ></app-server-traffic>
+    </div>
+
+    <div class="dashboard-item">
+      <app-body-wrapper image="list.png" title="Support Tickets">
+        <app-support-tickets></app-support-tickets>
+      </app-body-wrapper>
+    </div>
+  </div>
+</main>
